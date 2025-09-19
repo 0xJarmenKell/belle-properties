@@ -553,7 +553,7 @@ select:focus {
 /* Fix call button spacing */
 #cta-analysis .btn-3 {
   min-width: 150px;
-  margin-left: 10px;
+  margin-left: 16px;
 }
 
 /* Fix floating elements colors and spacing */
