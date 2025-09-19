@@ -571,6 +571,32 @@ select:focus {
   bottom: -15px !important;
 }
 
+/* Fix specific div spacing and width */
+.position-absolute.top-0.end-0 > div.bg-success.text-white.px-3.py-2.rounded-pill.small {
+  width: auto !important;
+  min-width: 80px !important;
+  padding: 6px 12px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+/* Alternative selector for more specificity */
+#cta-analysis .position-absolute.top-0.end-0 > div {
+  width: auto !important;
+  min-width: 80px !important;
+  padding: 6px 12px !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  background-color: #6e8878 !important;
+  color: #ffffff !important;
+}
+
 .bg-white {
   background-color: white;
 }
