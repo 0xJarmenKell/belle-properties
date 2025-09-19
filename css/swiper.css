@@ -1,0 +1,98 @@
+.swiper-container {
+  width: 100%;
+  max-width: 1220px;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+.swiper-wrapper {
+  display: flex;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  animation: opacity 1s ease-in-out;
+}
+.swiper-property-detail .swiper-slide {
+  opacity: 1;
+}
+.swiper-slide:hover {
+  opacity: 1;
+}
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.swiper-bg {
+  background-color: white !important;
+  opacity: 1 !important;
+  border-radius: 5px;
+}
+.swiper-pagination-bullet {
+  background-color: var(--text-color-2);
+  opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-main);
+}
+
+/* Testimonials Swiper Specific Styles */
+.swiper-testimonials {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  /* Ensure exact width calculation to prevent partial slides */
+}
+
+.swiper-testimonials .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-testimonials .swiper-slide {
+  opacity: 1 !important;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive slide width - exact calculations */
+@media (min-width: 768px) {
+  .swiper-testimonials .swiper-slide {
+    min-width: calc(50% - 15px); /* Account for spacing */
+    width: calc(50% - 15px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-testimonials .swiper-slide {
+    min-width: calc(33.333% - 27px); /* Account for 40px spacing */
+    width: calc(33.333% - 27px);
+    max-width: calc(33.333% - 27px);
+  }
+
+  /* Ensure container doesn't overflow */
+  .swiper-testimonials {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.swiper-testimonials .swiper-slide .testimonial-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.swiper-testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}

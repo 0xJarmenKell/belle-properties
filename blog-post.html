@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crescent - Real Estate & Property" />
+    <meta name="keywords"
+        content="apartment, architecture, broker, building, construction, home, house, interior, property, property agency, property agent, property listing, property sell, real estate, realtor" />
+    <meta name="author" content="Zaderon" />
+    <title>Blog Post - Crescent</title>
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/css/fontawesome.css" />
+    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/border.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+</head>
+
+<body>
+    <div class="bg-banner">
+        <!-- Navbar Start -->
+        <nav class="navbar d-flex justify-content-center navbar-border z-2">
+            <div class="navbar-size">
+                <div class="container-lg d-flex justify-content-between px-0">
+                    <div class="d-none d-sm-flex align-items-center gap-3">
+                        <a href="https://facebook.com" class="social-icon-32"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon-32"><i
+                                class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://youtube.com" class="social-icon-32"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com" class="social-icon-32"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a class="navbar-brand nav-logo-wrapper mx-0" href="index.html">
+                        <img src="img/logo.png" alt="Brand Logo" class="nav-logo img-fluid mx-auto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="d-flex c-white custom-toggler align-items-center gap-3">
+                            Menu
+                            <span class="custom-toggler-icon">
+                                <span class="bar bar-1"></span>
+                                <span class="bar bar-2"></span>
+                                <span class="bar bar-3"></span>
+                            </span>
+                        </span>
+                    </button>
+
+                    <!-- Offcanvas Menu -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <div class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <img src="img/logo.png" class="nav-logo mt-3" alt="Brand Logo" />
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav gap-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <button class="nav-link dropdown-toggle" id="listingDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-flex align-items-start">
+                                            Listing
+                                            <i id="listingDropdownIcon"
+                                                class="fa-solid fa-plus dropdown-icon-size ms-2 mt-2"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="listingDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="property-listings.html">Property Listings</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="property-detail.html">Property Detail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <button class="nav-link dropdown-toggle" id="servicesDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-flex align-items-start">
+                                            Services
+                                            <i id="ServicesDropdownIcon"
+                                                class="fa-solid fa-plus dropdown-icon-size ms-2 mt-2"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="services.html">Services</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="services-detail.html">Service Detail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <button class="nav-link dropdown-toggle" id="pagesDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-flex align-items-start">
+                                            Pages
+                                            <i id="pagesDropdownIcon"
+                                                class="fa-solid fa-plus dropdown-icon-size ms-2 mt-2"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="team.html">Our Team</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="pricing.html">Pricing</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="faqs.html">FAQs</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="404-page.html">404 Error</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="single-post.html">Single Post</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="alert-container"></div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Banner Start -->
+        <div class="banner d-flex justify-content-end align-items-center page-size">
+            <div class="fade-in-up">
+                <div class="d-flex justify-content-end">
+                    <span class="banner-subtitle">Home </span><span class="c-white">&nbsp; &gt; &nbsp;</span><span
+                        class="banner-subtitle"> Blog Post</span>
+                </div>
+                <h1 class="c-white mt-3">Our Blog Post</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+    <!-- Blog Post Start -->
+    <div class="bg-subtle">
+        <div class="page-size">
+            <div class="container-xl">
+                <div class="row align-items-end">
+                    <div class="col-12 col-lg-5 fade-in-up">
+                        <div
+                            class="pb-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
+                            <div class="d-flex">
+                                <span class="subtitle">OUR BLOG POST</span>
+                            </div>
+                            <h2 class="mt-3 mb-4 text-center text-lg-start">
+                                Stay <i class="ff-playfair">Informed</i> with
+                                <i class="ff-playfair">Our Blog</i>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7 d-block d-lg-flex align-items-end gap-4 mt-2 mt-lg-0 fade-in-up">
+                        <p class="text-center text-md-start col-lg-9">
+                            Stay updated with the latest property insights, market trends,
+                            and expert advice to make informed real estate decisions.
+                        </p>
+                        <div class="d-flex justify-content-center justify-content-md-end">
+                            <a href="blog-post.html" class="btn-2 mt-2 mt-lg-0">More Article ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 fade-in-up mt-4">
+                    <div class="col blog-col-1 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-1.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Tips for Buyers</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-2 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-2.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Smart Home Innovations</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-3 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-3.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Invest in Neighborhoods</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-4 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-4.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Invest in Neighborhoods</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-5 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-5.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Invest in Neighborhoods</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-6 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-6.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Invest in Neighborhoods</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-7 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-7.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Invest in Neighborhoods</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                    <div class="col blog-col-8 fade-in-up">
+                        <a href="single-post.html">
+                            <div class="blog-img-wrapper">
+                                <img src="img/blog-8.jpg" alt="blog" class="blog-img" />
+                            </div>
+                        </a>
+                        <div class="blog-card">
+                            <a href="single-post.html">
+                                <h5 class="c-white my-4">Invest in Neighborhoods</h5>
+                            </a>
+                            <p class="c-text-2">
+                                zaderonstudio May 13, 2025 Single Post real Estate
+                                Journey Lorem...
+                            </p>
+                            <a href="single-post.html" class="blog-link">Learn more ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Post End -->
+    <!-- Sign Up Start -->
+    <div class="bg-subtle">
+        <div class="bg-sign-up page-size py-5">
+            <div class="container p-1 py-lg-5">
+                <div class="row">
+                    <div class="col-12 col-lg-7 fade-in-up">
+                        <h3 class="mt-3 mb-4 c-white text-center text-lg-start">
+                            Sign Up Our <i class="ff-playfair">Newsletter</i> for
+                            <i class="ff-playfair">Insight</i>
+                        </h3>
+                        <p class="mt-4 c-text-2 text-center text-lg-start">
+                            Stay updated with the latest property news, tips, and exclusive
+                            offers. Subscribe now and never miss an opportunity again
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-5 d-flex align-items-end fade-in-up">
+                        <div class="newsletter-container mx-auto">
+                            <div class="popup-message" id="popupMessage">
+                                <div>
+                                    <i class="fa-solid fa-check fa-2xl"></i>
+                                </div>
+                                Thank you! The form submitted successfully
+                            </div>
+                            <form class="newsletter-form" action="#" id="newsletterForm">
+                                <input type="email" placeholder="Your Email" class="email-input" />
+                                <button type="submit" class="btn-newsletter">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up End -->
+    <!-- Footer Start -->
+    <div class="bg-subtle">
+        <div class="page-size">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5 pe-lg-5">
+                        <img src="img/Cresent-Logo-Light_1.png" alt="crescent logo" class="footer-logo img-fluid" />
+                        <p class="c-text-1 mt-4">
+                            Discover homes that match your style and needs-only with
+                            Crescent's expert real estate solutions
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <h5>Contact</h5>
+                        <div class="d-flex gap-2 mt-4">
+                            <i class="fa-solid fa-phone c-main mt-1"></i>
+                            <p class="c-text-1">+1 (555) 123-4567</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <i class="fa-solid fa-envelope-open c-main mt-1"></i>
+                            <p class="c-text-1">info@crescentrealty.com</p>
+                        </div>
+                        <h5 class="mt-4">Address</h5>
+                        <div class="d-flex gap-2 mt-4">
+                            <i class="fa-solid fa-location-dot c-main mt-1"></i>
+                            <p class="c-text-1">
+                                123 Crescent Avenue, Suite 456, Metropolis, NY 10101
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <h5>Explore</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="index.html" class="footer-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer-link">About</a>
+                            </li>
+                            <li>
+                                <a href="services.html" class="footer-link">Services</a>
+                            </li>
+                            <li>
+                                <a href="property-listing.html" class="footer-link">Listing</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html" class="footer-link">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <h5>Quick Link</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#" class="footer-link">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Terms</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Disclaimer</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

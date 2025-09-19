@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crescent - Real Estate & Property" />
+    <meta name="keywords"
+        content="apartment, architecture, broker, building, construction, home, house, interior, property, property agency, property agent, property listing, property sell, real estate, realtor" />
+    <meta name="author" content="Zaderon" />
+    <title>About - Crescent</title>
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/css/fontawesome.css" />
+    <link rel="stylesheet" href="lib/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/border.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+</head>
+
+<body>
+    <div class="bg-banner">
+        <!-- Navbar Start -->
+        <nav class="navbar d-flex justify-content-center navbar-border z-2">
+            <div class="navbar-size">
+                <div class="container-lg d-flex justify-content-between px-0">
+                    <div class="d-none d-sm-flex align-items-center gap-3">
+                        <a href="https://facebook.com" class="social-icon-32"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" class="social-icon-32"><i
+                                class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://youtube.com" class="social-icon-32"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://twitter.com" class="social-icon-32"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a class="navbar-brand nav-logo-wrapper mx-0" href="index.html">
+                        <img src="img/logo.png" alt="Brand Logo" class="nav-logo img-fluid mx-auto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="d-flex c-white custom-toggler align-items-center gap-3">
+                            Menu
+                            <span class="custom-toggler-icon">
+                                <span class="bar bar-1"></span>
+                                <span class="bar bar-2"></span>
+                                <span class="bar bar-3"></span>
+                            </span>
+                        </span>
+                    </button>
+
+                    <!-- Offcanvas Menu -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <div class="offcanvas-title" id="offcanvasNavbarLabel">
+                                <img src="img/logo.png" class="nav-logo mt-3" alt="Brand Logo" />
+                            </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav gap-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <button class="nav-link dropdown-toggle" id="listingDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-flex align-items-start">
+                                            Listing
+                                            <i id="listingDropdownIcon"
+                                                class="fa-solid fa-plus dropdown-icon-size ms-2 mt-2"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="listingDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="property-listings.html">Property Listings</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="property-detail.html">Property Detail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <button class="nav-link dropdown-toggle" id="servicesDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-flex align-items-start">
+                                            Services
+                                            <i id="ServicesDropdownIcon"
+                                                class="fa-solid fa-plus dropdown-icon-size ms-2 mt-2"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="services.html">Services</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="services-detail.html">Service Detail</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <button class="nav-link dropdown-toggle" id="pagesDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-flex align-items-start">
+                                            Pages
+                                            <i id="pagesDropdownIcon"
+                                                class="fa-solid fa-plus dropdown-icon-size ms-2 mt-2"></i>
+                                        </span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                        <li>
+                                            <a class="dropdown-item" href="team.html">Our Team</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="pricing.html">Pricing</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="faqs.html">FAQs</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="404-page.html">404 Error</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="single-post.html">Single Post</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="alert-container"></div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        <!-- Banner Start -->
+        <div class="banner d-flex justify-content-end align-items-center page-size">
+            <div class="fade-in-up">
+                <div class="d-flex justify-content-end">
+                    <span class="banner-subtitle">Home </span><span class="c-white">&nbsp; &gt; &nbsp;</span><span
+                        class="banner-subtitle"> About <i class="ff-playfair"> Us</i></span>
+                </div>
+                <h1 class="c-white mt-3">About Us</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+    <!-- About Start -->
+    <div class="bg-subtle">
+        <div class="page-size overflow-hidden">
+            <span class="subtitle fade-in-up"> about us </span>
+            <h2 class="col-7 mt-3 mb-4 fade-in-up">
+                Blending Modern Design and Tradition to
+                <i class="ff-playfair">Build</i> Your
+                <i class="ff-playfair">Future</i>
+            </h2>
+            <div class="container px-0 fade-in-up">
+                <div class="row row-cols-1 row-cols-md-2 g-5 my-4">
+                    <div class="col">
+                        <p class="c-heading-2">
+                            At Crescent, we redefine living spaces with innovative designs
+                            and unparalleled expertise. Our passion lies in creating homes
+                            that inspire. With a commitment to quality and customer
+                            satisfaction.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="c-heading-2">
+                            Every detail is crafted with precision, ensuring you find the
+                            perfect place to call home. From luxury properties to functional
+                            spaces, Crescent brings dreams to life, one home at a time.
+                        </p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 g-5">
+                    <div class="col">
+                        <h5>Our Vision</h5>
+                        <p class="c-heading-2 my-4">
+                            To be the leading real estate brand, redefining modern living by
+                            creating spaces that inspire, empower, and elevate lifestyles
+                        </p>
+                        <h5>Our Mission</h5>
+                        <ul class="c-heading-2 my-4">
+                            <li>
+                                <i class="fa-solid fa-check me-2"></i>Connecting people with
+                                perpect properties
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check me-2"></i>Delivering Excellence in
+                                real estate
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check me-2"></i>Empowering communities
+                                through exceptional spaces
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check me-2"></i>
+                                Creating value, trust, and satisfaction
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check me-2"></i>
+                                Redefining modern living with innovation
+                            </li>
+                        </ul>
+                        <div class="about-card d-flex justify-content-between align-items-center mt-4">
+                            <div>
+                                <h3 class="c-white">
+                                    Start Your <i class="ff-playfair">Property</i>
+                                </h3>
+                                <h3 class="c-white">Search Now!</h3>
+                            </div>
+                            <div>
+                                <button class="btn-1 p-2 me-4">Contact Us ></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-stretch">
+                        <img src="img/about-1.jpg" alt="about" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+            <p class="mt-5 fade-in-up">
+                Partnering with global brand to bring you world-class real estate
+                solutions
+            </p>
+            <div class="swiper-container mt-1 fade-in-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/logo-1.png" alt="Logo 1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-2.png" alt="Logo 2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-3.png" alt="Logo 3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-4.png" alt="Logo 4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-5.png" alt="Logo 5" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-6.png" alt="Logo 6" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-7.png" alt="Logo 7" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-8.png" alt="Logo 8" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/logo-9.png" alt="Logo 9" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Company Value Start -->
+    <div class="bg-heading">
+        <div class="page-size">
+            <div class="c-white fade-in-up">
+                <span class="subtitle c-white"> company value </span>
+                <h2 class="col-7 mt-3 mb-4">
+                    Our Values That <i class="ff-playfair">Shape</i> Our <i class="ff-playfair">Success</i>
+                </h2>
+            </div>
+            <div class="container px-0 fade-in-up">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="accent-card">
+                            <i class="fa-regular fa-circle-check fa-2xl c-heading"></i>
+                            <h5 class="c-heading mt-3 mb-4">Integrity Always</h5>
+                            <p class="c-text-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam dolorum,
+                                quibusdam nemo dolorem repellendus. </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="accent-card">
+                            <i class="fa-regular fa-circle-check fa-2xl c-heading"></i>
+                            <h5 class="c-heading mt-3 mb-4">Customer Focus</h5>
+                            <p class="c-text-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam dolorum,
+                                quibusdam nemo dolorem repellendus. </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="accent-card">
+                            <i class="fa-regular fa-circle-check fa-2xl c-heading"></i>
+                            <h5 class="c-heading mt-3 mb-4">Quality First</h5>
+                            <p class="c-text-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam dolorum,
+                                quibusdam nemo dolorem repellendus. </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="accent-card">
+                            <i class="fa-regular fa-circle-check fa-2xl c-heading"></i>
+                            <h5 class="c-heading mt-3 mb-4">Innovation Driven</h5>
+                            <p class="c-text-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam dolorum,
+                                quibusdam nemo dolorem repellendus. </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="accent-card">
+                            <i class="fa-regular fa-circle-check fa-2xl c-heading"></i>
+                            <h5 class="c-heading mt-3 mb-4">Sustainable Growth</h5>
+                            <p class="c-text-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam dolorum,
+                                quibusdam nemo dolorem repellendus. </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="accent-card">
+                            <i class="fa-regular fa-circle-check fa-2xl c-heading"></i>
+                            <h5 class="c-heading mt-3 mb-4">Community Commitment</h5>
+                            <p class="c-text-1">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium numquam dolorum,
+                                quibusdam nemo dolorem repellendus. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Company Value End -->
+    <!-- Team Start -->
+    <div class="bg-subtle">
+        <div class="page-size">
+            <div class="fade-in-up">
+                <span class="subtitle"> Our Team </span>
+                <h2 class="col-7 mt-3 mb-4">
+                    Our <i class="ff-playfair">Team</i> Behind <i class="ff-playfair">Crescent</i>
+                </h2>
+            </div>
+            <div class="container px-0 fade-in-up">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="img-team-wrapper">
+                            <div class="img-team-overlay"></div>
+                            <img src="img/team-1.jpg" class="team-img" alt="team" />
+                            <div class="social-team">
+                                <div class="d-flex gap-2 py-2 mt-4 justify-content-center align-items-center">
+                                    <a href="https://www.facebook.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accent-card">
+                            <h4 class="c-heading mt-3 mb-3 border-bottom pb-3">Emily Carter</h4>
+                            <span class="c-text-1">
+                                MARKETING MANAGER
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-team-wrapper">
+                            <div class="img-team-overlay"></div>
+                            <img src="img/team-2.jpg" class="team-img" alt="team" />
+                            <div class="social-team">
+                                <div class="d-flex gap-2 py-2 mt-4 justify-content-center align-items-center">
+                                    <a href="https://www.facebook.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accent-card">
+                            <h4 class="c-heading mt-3 mb-3 border-bottom pb-3">James Wilson</h4>
+                            <span class="c-text-1">
+                                SALES DIRECTOR
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-team-wrapper">
+                            <div class="img-team-overlay"></div>
+                            <img src="img/team-3.jpg" class="team-img" alt="team" />
+                            <div class="social-team">
+                                <div class="d-flex gap-2 py-2 mt-4 justify-content-center align-items-center">
+                                    <a href="https://www.facebook.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accent-card">
+                            <h4 class="c-heading mt-3 mb-3 border-bottom pb-3">Sophia Martinez</h4>
+                            <span class="c-text-1">
+                                PROPERTY CONSULTANT
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="img-team-wrapper">
+                            <div class="img-team-overlay"></div>
+                            <img src="img/team-4.jpg" class="team-img" alt="team" />
+                            <div class="social-team">
+                                <div class="d-flex gap-2 py-2 mt-4 justify-content-center align-items-center">
+                                    <a href="https://www.facebook.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/" class="icon-social-team">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accent-card">
+                            <h4 class="c-heading mt-3 mb-3 border-bottom pb-3">Liam Turner</h4>
+                            <span class="c-text-1">
+                                FINANCIAL ADVISOR
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    <!-- FAQS Start -->
+    <div class="bg-subtle">
+        <div class="page-size pt-0">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-2 g-5 fade-in-up">
+                    <div class="col-12 col-lg-6 order-1 order-lg-0">
+                        <div class="accordion mt-2 mt-lg-5" id="faqsAccordion1">
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingOne1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne1" aria-expanded="true"
+                                        aria-controls="collapseOne1">
+                                        What services does Crescent offer?
+                                    </button>
+                                </span>
+                                <div id="collapseOne1" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne1" data-bs-parent="#faqsAccordion1">
+                                    <div class="accordion-body">
+                                        We specialize in property buying, selling, renting, and
+                                        management, offering tailored solutions to meet your
+                                        needs.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingTwo1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo1" aria-expanded="false"
+                                        aria-controls="collapseTwo1">
+                                        How can I list my property with Crescent?
+                                    </button>
+                                </span>
+                                <div id="collapseTwo1" class="accordion-collapse collapse" aria-labelledby="headingTwo1"
+                                    data-bs-parent="#faqsAccordion1">
+                                    <div class="accordion-body">
+                                        Simply contact our team or use our online submission form.
+                                        We’ll guide you through every step of the process
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingThree1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree1" aria-expanded="false"
+                                        aria-controls="collapseThree1">
+                                        What is the cost of listing a property?
+                                    </button>
+                                </span>
+                                <div id="collapseThree1" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree1" data-bs-parent="#faqsAccordion1">
+                                    <div class="accordion-body">
+                                        Our pricing packages start at $299/month, designed to suit
+                                        various budgets and requirements. Custom options are also
+                                        available.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingFour1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour1" aria-expanded="false"
+                                        aria-controls="collapseFour1">
+                                        How do I schedule a property viewing?
+                                    </button>
+                                </span>
+                                <div id="collapseFour1" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour1" data-bs-parent="#faqsAccordion1">
+                                    <div class="accordion-body">
+                                        You can book a viewing directly through our website or by
+                                        contacting the listed agent for the property.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingFive1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive1" aria-expanded="false"
+                                        aria-controls="collapseFive1">
+                                        Does Crescent assist with financing options?
+                                    </button>
+                                </span>
+                                <div id="collapseFive1" class="accordion-collapse collapse"
+                                    aria-labelledby="headingFive1" data-bs-parent="#faqsAccordion1">
+                                    <div class="accordion-body">
+                                        Yes, we work with trusted financial partners to help you
+                                        secure loans or mortgages at competitive rates.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <span class="accordion-header" id="headingSix1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix1" aria-expanded="false"
+                                        aria-controls="collapseSix1">
+                                        What areas do you serve?
+                                    </button>
+                                </span>
+                                <div id="collapseSix1" class="accordion-collapse collapse" aria-labelledby="headingSix1"
+                                    data-bs-parent="#faqsAccordion1">
+                                    <div class="accordion-body">
+                                        We operate in multiple regions, including urban, suburban,
+                                        and rural areas. Check our listings for specific
+                                        locations.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center order-0 order-lg-1">
+                        <div class="mt-5 mt-sm-0">
+                            <span class="subtitle">FREQUENTLY ASK QUESTION</span>
+                            <h2 class="mt-3 mb-4">
+                                Got Questions? <i class="ff-playfair">We</i> Have
+                                <i class="ff-playfair">Answer</i>
+                            </h2>
+                            <p class="mt-4">
+                                Find answer to common questions about our services, pricing,
+                                and process. Explore our FAQs to get all the details you need
+                            </p>
+                            <div class="d-flex gap-4 mt-4">
+                                <a href="faqs.html" class="btn-4">More FAQs ></a>
+                                <a href="#" class="btn-2">Ask Question ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FAQS End -->
+    <!-- Sign Up Start -->
+    <div class="bg-subtle">
+        <div class="bg-sign-up page-size py-5">
+            <div class="container p-1 py-lg-5">
+                <div class="row">
+                    <div class="col-12 col-lg-7 fade-in-up">
+                        <h3 class="mt-3 mb-4 c-white text-center text-lg-start">
+                            Sign Up Our <i class="ff-playfair">Newsletter</i> for
+                            <i class="ff-playfair">Insight</i>
+                        </h3>
+                        <p class="mt-4 c-text-2 text-center text-lg-start">
+                            Stay updated with the latest property news, tips, and exclusive
+                            offers. Subscribe now and never miss an opportunity again
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-5 d-flex align-items-end fade-in-up">
+                        <div class="newsletter-container mx-auto">
+                            <div class="popup-message" id="popupMessage">
+                                <div>
+                                    <i class="fa-solid fa-check fa-2xl"></i>
+                                </div>
+                                Thank you! The form submitted successfully
+                            </div>
+                            <form class="newsletter-form" action="#" id="newsletterForm">
+                                <input type="email" placeholder="Your Email" class="email-input" />
+                                <button type="submit" class="btn-newsletter">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up End -->
+    <!-- Footer Start -->
+    <div class="bg-subtle">
+        <div class="page-size">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5 pe-lg-5">
+                        <img src="img/Cresent-Logo-Light_1.png" alt="crescent logo" class="footer-logo img-fluid" />
+                        <p class="c-text-1 mt-4">
+                            Discover homes that match your style and needs-only with
+                            Crescent's expert real estate solutions
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <h5>Contact</h5>
+                        <div class="d-flex gap-2 mt-4">
+                            <i class="fa-solid fa-phone c-main mt-1"></i>
+                            <p class="c-text-1">+1 (555) 123-4567</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <i class="fa-solid fa-envelope-open c-main mt-1"></i>
+                            <p class="c-text-1">info@crescentrealty.com</p>
+                        </div>
+                        <h5 class="mt-4">Address</h5>
+                        <div class="d-flex gap-2 mt-4">
+                            <i class="fa-solid fa-location-dot c-main mt-1"></i>
+                            <p class="c-text-1">
+                                123 Crescent Avenue, Suite 456, Metropolis, NY 10101
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <h5>Explore</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="index.html" class="footer-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html" class="footer-link">About</a>
+                            </li>
+                            <li>
+                                <a href="services.html" class="footer-link">Services</a>
+                            </li>
+                            <li>
+                                <a href="property-listing.html" class="footer-link">Listing</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html" class="footer-link">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-2">
+                        <h5>Quick Link</h5>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#" class="footer-link">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Terms</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Disclaimer</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer-link">Cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <script src="lib/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js/swiper-bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

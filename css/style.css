@@ -1,0 +1,2148 @@
+/* ======================================================
+   TABLE OF CONTENTS
+======================================================
+1.  Font Face Declarations
+2.  Root Variables
+3.  General Style
+    3.1 Headings
+    3.2 Paragraphs
+    3.3 Links
+    3.4 Buttons
+    3.5 Image
+    3.6 Lists
+4.  Utility Classes
+    4.1 Color Utilities
+    4.2 Background Utilities
+    4.3 Sizing Utilities
+    4.4 Other Utilities
+5.  Navbar Styles
+    5.1 Offcanvas
+    5.1.1 Offcanvas Social Icon
+    5.2 Dropdown
+6.  Hero Styles
+7.  About Styles
+8.  Service Styles
+9.  How It Works Styles
+10. Why Choose Us Styles
+11. Testimonials Styles
+12. FAQs Styles
+13. Banner Styles
+14. Blog Post Styles
+15. Core Values Styles
+16. Team Styles
+17. Contact Styles
+18. Maps Styles
+19. Services Detail Styles
+20. Footer Styles
+21. Animation
+22. Media Queries
+====================================================== */
+
+/* ======================================================
+   1. FONT FACE DECLARATIONS
+   Define custom fonts used throughout the template.
+====================================================== */
+@font-face {
+  font-family: "manrope";
+  src: url(../font/manrope.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "playfair";
+  src: url(../font/playfair.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ======================================================
+   2. ROOT VARIABLES
+   Global variables for colors, fonts, and reusable values.
+====================================================== */
+:root {
+  /* Brand Identity Colors */
+  --text-color-1: #000000; /* Primary text: Black */
+  --text-color-2: #1a1a1a; /* Secondary text: 10% tint of black */
+  --heading-color: #000000; /* Primary headings: Black */
+  --heading-color-2: #000000; /* Secondary headings: Black */
+  --color-main: #6e8878; /* Icons and accents: Mid Green */
+  --color-darker: #386351; /* Hover states: Green */
+  --color-lighter: #6e8878; /* Light accents: Mid Green */
+  --color-subtle: #f5f5f5; /* Off-white background */
+  --color-border: #000000; /* Borders: Black */
+  --color-accent: #ffffff; /* White backgrounds */
+  --color-error: #e22d2d;
+  --color-warning: #e2d52d;
+  --color-info: #2663cf;
+  --color-success: #6e8878; /* Success states: Mid Green */
+  --font-1: "manrope";
+  --font-2: "playfair";
+}
+
+/* Prevent horizontal overflow and enable smooth scrolling */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  /* Enhanced smooth scrolling - fallback for browsers that support it */
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Account for fixed navbar */
+}
+
+/* For browsers that support scroll timeline */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Global smooth transitions for better UX */
+* {
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Smooth cursor transition */
+body {
+  transition: cursor 0.2s ease;
+}
+
+/* Improve button hover effects */
+.btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* Brand white background */
+  color: #000000; /* Brand black text */
+}
+
+/* ======================================================
+   3. GENERAL STYLE
+   Base styles for HTML elements.
+====================================================== */
+
+/* ------------------------------------------------------
+   3.1 HEADINGS - Brand Typography
+   Typography for all heading levels.
+------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-1);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000000; /* Brand black for all headings */
+}
+
+h1 {
+  font-size: 85px;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------
+   3.2 PARAGRAPHS - Brand Text
+   Styles for paragraph text.
+------------------------------------------------------ */
+p {
+  font-size: 16px;
+  color: #000000; /* Brand black for primary text */
+  font-weight: 400;
+  font-family: var(--font-1);
+  line-height: 1.5em;
+}
+
+/* ------------------------------------------------------
+   3.3 LINKS - Brand Colors
+   Anchor tag styles.
+------------------------------------------------------ */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #000000; /* Brand black for links */
+  font-family: var(--font-1);
+}
+
+a:hover {
+  color: #6e8878; /* Mid green on hover */
+}
+
+/* ------------------------------------------------------
+   3.4 BUTTONS
+   Button base styles.
+------------------------------------------------------ */
+button {
+  font-family: var(--font-1);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Brand CTA Buttons - White bg, Black text/border, Green hover */
+.btn-1 {
+  border: 1px solid #000000;
+  padding: 12px 24px;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: var(--font-1);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-1:hover {
+  background-color: #386351;
+  color: #ffffff;
+  border-color: #386351;
+}
+
+.btn-2 {
+  width: fit-content;
+  border: 1px solid #000000;
+  padding: 12px 24px;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: var(--font-1);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-2:hover {
+  background-color: #386351;
+  color: #ffffff;
+  border-color: #386351;
+}
+
+.btn-3 {
+  width: fit-content;
+  border: 1px solid #000000;
+  padding: 12px 24px;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: var(--font-1);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-3:hover {
+  background-color: #386351;
+  color: #ffffff;
+  border-color: #386351;
+}
+
+.btn-4 {
+  width: fit-content;
+  border: 1px solid #000000;
+  padding: 12px 24px;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: var(--font-1);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.btn-4:hover {
+  background-color: #386351;
+  color: #ffffff;
+  border-color: #386351;
+}
+
+/* ------------------------------------------------------
+   3.5 IMAGE
+   Image element styles.
+------------------------------------------------------ */
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ------------------------------------------------------
+   3.6 LISTS
+   List element styles.
+------------------------------------------------------ */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-family: var(--font-1) !important;
+  font-weight: 400;
+  color: var(--heading-color-2);
+}
+
+/* 4.1 Brand Color Utilities */
+.c-text-1 {
+  color: #000000 !important; /* Primary text: Black */
+}
+
+.c-text-2 {
+  color: #1a1a1a !important; /* Secondary text: 10% tint of black */
+}
+
+.c-heading {
+  color: #000000 !important; /* Primary headings: Black */
+}
+
+.c-heading-2 {
+  color: #000000 !important; /* Secondary headings: Black */
+}
+
+.c-main {
+  color: #6e8878 !important; /* Icons and accents: Mid Green */
+}
+
+.c-darker {
+  color: #386351 !important; /* Hover states: Green */
+}
+
+.c-lighter {
+  color: #6e8878 !important; /* Light accents: Mid Green */
+}
+
+.c-subtle {
+  color: #1a1a1a !important; /* Subtle text: 10% tint of black */
+}
+
+.c-border {
+  color: #000000 !important; /* Borders: Black */
+}
+
+.c-error {
+  color: var(--color-error);
+}
+
+.c-warning {
+  color: var(--color-warning);
+}
+
+.c-info {
+  color: var(--color-info);
+}
+
+.c-success {
+  color: #6e8878 !important; /* Success states: Mid Green */
+}
+
+.c-accent {
+  color: #6e8878 !important; /* Accent color: Mid Green */
+}
+
+.c-white {
+  color: #ffffff !important; /* Brand white */
+}
+
+.c-black {
+  color: #000000 !important; /* Brand black */
+}
+
+/* 4.2 Background Utilities */
+.bg-text-1 {
+  background-color: var(--text-color-1);
+}
+
+.bg-text-2 {
+  background-color: var(--text-color-2);
+}
+
+.bg-heading {
+  background-color: var(--heading-color);
+}
+
+/* Brand Background Colors */
+.bg-main {
+  background-color: #6e8878; /* Mid Green */
+}
+
+.bg-darker {
+  background-color: #386351; /* Green hover */
+}
+
+.bg-lighter {
+  background-color: #6e8878; /* Mid Green */
+}
+
+.bg-subtle {
+  background-color: #f5f5f5; /* Off-white */
+}
+
+/* Override footer background specifically */
+#contact + .bg-subtle {
+  background-color: #386351 !important; /* Darker Green for footer */
+  color: #ffffff !important; /* White text for contrast */
+}
+
+#contact + .bg-subtle * {
+  color: #ffffff !important; /* Ensure all text is white */
+}
+
+#contact + .bg-subtle .footer-link {
+  color: #ffffff !important; /* White footer links */
+}
+
+#contact + .bg-subtle .footer-link:hover {
+  color: #f5f5f5 !important; /* Light gray on hover */
+}
+
+#contact + .bg-subtle h2,
+#contact + .bg-subtle h3,
+#contact + .bg-subtle h4,
+#contact + .bg-subtle h5,
+#contact + .bg-subtle h6,
+#contact + .bg-subtle p,
+#contact + .bg-subtle li {
+  color: #ffffff !important; /* White text for all content */
+}
+
+.bg-border {
+  background-color: #000000; /* Black */
+}
+
+.bg-error {
+  background-color: var(--color-error);
+}
+
+.bg-warning {
+  background-color: var(--color-warning);
+}
+
+.bg-info {
+  background-color: var(--color-info);
+}
+
+.bg-success {
+  background-color: #6e8878; /* Mid Green */
+}
+
+.bg-accent {
+  background-color: #ffffff; /* White */
+}
+
+.bg-white {
+  background-color: #ffffff; /* Brand white */
+}
+
+.bg-black {
+  background-color: #000000; /* Brand black */
+}
+
+/* Additional Brand-Specific Styles */
+.navbar {
+  background-color: #ffffff !important; /* White navbar */
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.navbar-brand {
+  color: #000000 !important;
+}
+
+.navbar-toggler {
+  border-color: #000000;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(110, 136, 120, 0.25);
+}
+
+/* Brand Cards and Sections */
+.card,
+.testimonial-card,
+.about-card,
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid #f5f5f5;
+  color: #000000;
+}
+
+.swiper-bg {
+  background-color: #ffffff !important;
+}
+
+/* Ensure subtitles use secondary text color */
+.subtitle {
+  color: #1a1a1a !important; /* 10% tint of black */
+}
+
+/* Footer adjustments */
+footer {
+  background-color: #6e8878;
+  color: #ffffff;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  border-color: #000000;
+  color: #000000;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6e8878;
+  box-shadow: 0 0 0 0.2rem rgba(110, 136, 120, 0.25);
+}
+
+/* CTA Section Specific Buttons */
+#cta-analysis .btn-2,
+#cta-analysis .btn-3 {
+  background-color: #6e8878 !important;
+  color: #ffffff !important;
+  border-color: #6e8878 !important;
+  padding: 12px 24px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cta-analysis .btn-2:hover,
+#cta-analysis .btn-3:hover {
+  background-color: #386351 !important;
+  border-color: #386351 !important;
+  color: #ffffff !important;
+}
+
+/* Fix call button spacing */
+#cta-analysis .btn-3 {
+  min-width: 150px;
+  margin-left: 10px;
+}
+
+/* Fix floating elements colors and spacing */
+#cta-analysis .position-absolute > div {
+  background-color: #6e8878 !important;
+  color: #ffffff !important;
+  padding: 8px 16px;
+}
+
+#cta-analysis .top-0 {
+  top: -15px !important;
+}
+
+#cta-analysis .bottom-0 {
+  bottom: -15px !important;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-discover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/discover-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-sign-up {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../img/sign-up.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 32px;
+}
+
+/* 4.3 Sizing Utilities */
+.navbar-size {
+  width: 1300px;
+}
+
+.page-size {
+  width: 1300px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.get-started-size {
+  width: 1280px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 4.4 Other Utilities */
+.border-radius {
+  border-radius: 5px;
+}
+
+.slideshow {
+  position: relative;
+  max-height: 900px;
+  /* height: 100vh; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideshow 20s infinite;
+  overflow: hidden;
+}
+
+.slideshow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+@keyframes slideshow {
+  0% {
+    background-image: url("../img/hero-1.jpg");
+  }
+
+  33% {
+    background-image: url("../img/hero-2.jpg");
+  }
+
+  66% {
+    background-image: url("../img/hero-3.jpg");
+  }
+
+  100% {
+    background-image: url("../img/hero-1.jpg");
+  }
+}
+
+/* ======================================================
+   5. NAVBAR STYLES
+   Styles for navigation bar and navigation elements.
+====================================================== */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler .custom-toggler-icon {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: end;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  color: white !important;
+}
+
+.navbar-toggler .bar {
+  display: block;
+  height: 1px;
+  border-radius: 2px;
+  width: 100%;
+  background-color: rgb(195, 195, 195);
+  border: none;
+}
+
+.navbar-toggler .bar-1 {
+  width: 100%;
+}
+
+.navbar-toggler .bar-2 {
+  width: 100%;
+}
+
+.navbar-toggler .bar-3 {
+  width: 100%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 50%;
+  max-height: 60px;
+}
+
+.nav-link {
+  color: var(--text-color-1);
+  font-size: 15px;
+  font-family: var(--font-1);
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.custom-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.344);
+  padding: 4px 14px;
+  font-size: 16px !important;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2844, 131, 145, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Social Icon Sizing Fix */
+.social-icon-32,
+.social-icon-32 i {
+  font-size: 16px !important; /* Standardize icon size */
+  line-height: 1;
+}
+
+.navbar-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------------------------------------------
+   5.1 OFFCANVAS
+   Styles for offcanvas navigation menu.
+------------------------------------------------------ */
+.offcanvas-header .btn-close-custom {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: transparent;
+  border: 1px solid var(--text-color-2);
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.btn-close {
+  color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  opacity: 1 !important;
+}
+
+.btn-close:hover {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236E8878'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+
+.offcanvas {
+  background-color: #000000 !important; /* Dark background for mobile menu */
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  color: #ffffff !important;
+}
+
+/* Right-side offcanvas (offcanvas-end) */
+.offcanvas-end {
+  right: 0;
+  transform: translateX(100%) !important;
+}
+
+.offcanvas-end.show {
+  transform: translateX(0) !important;
+}
+
+.offcanvas-end:not(.show) {
+  transform: translateX(100%) !important;
+}
+
+/* Enhanced offcanvas backdrop transition */
+.offcanvas-backdrop {
+  transition: opacity 0.4s ease-in-out !important;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0.5 !important;
+}
+
+/* Smooth navigation link transitions */
+.nav-link {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.nav-link:hover {
+  transform: translateX(-5px);
+  color: var(--color-main) !important;
+}
+
+/* Mobile menu navigation links - white color */
+.offcanvas .nav-link {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.offcanvas .nav-link:hover {
+  color: #6e8878 !important;
+  transform: translateX(5px);
+}
+
+.offcanvas .nav-link.active {
+  color: #6e8878 !important;
+}
+
+.offcanvas-title {
+  color: #ffffff !important;
+}
+
+/* Staggered animation for nav items when menu opens from right */
+.offcanvas .nav-item {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease-out;
+}
+
+.offcanvas.show .nav-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.offcanvas.show .nav-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.offcanvas.show .nav-item:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.offcanvas.show .nav-item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.offcanvas.show .nav-item:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.offcanvas.show .nav-item:nth-child(5) {
+  transition-delay: 0.3s;
+}
+.offcanvas.show .nav-item:nth-child(6) {
+  transition-delay: 0.35s;
+}
+.offcanvas.show .nav-item:nth-child(7) {
+  transition-delay: 0.4s;
+}
+.offcanvas.show .nav-item:nth-child(8) {
+  transition-delay: 0.45s;
+}
+
+/* Active nav link with smooth transition for right-side menu */
+.nav-link.active {
+  color: var(--color-main) !important;
+  transform: translateX(-10px);
+  position: relative;
+}
+
+.nav-link.active:before {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background-color: var(--color-main);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ------------------------------------------------------
+   5.1.1 OFFCANVAS SOCIAL ICON
+   Social icon styles in offcanvas menu.
+------------------------------------------------------ */
+.social-icon-32 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #6e8878;
+  border-radius: 50%;
+  color: #6e8878;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-icon-32 i {
+  line-height: 1;
+}
+
+.social-icon-32:hover {
+  color: #ffffff;
+  background-color: #386351;
+  border-color: #386351;
+}
+
+/* ------------------------------------------------------
+   5.2 DROPDOWN
+   Dropdown menu styles in navbar.
+------------------------------------------------------ */
+.nav-item.dropdown .nav-link:hover {
+  color: #6e8878 !important; /* Mid green on hover */
+  box-shadow: none;
+}
+
+.nav-item.dropdown .nav-link:active {
+  box-shadow: none;
+}
+
+.nav-link {
+  color: #000000 !important; /* Brand black for nav links */
+  font-size: 20px;
+  font-family: var(--font-1);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover .nav-link {
+  color: #6e8878 !important; /* Mid green on hover */
+}
+
+.nav-link.active {
+  color: #6e8878 !important; /* Mid green for active state */
+  box-shadow: none;
+}
+
+.nav-link:focus,
+.dropdown-item:focus {
+  color: var(--color-main);
+  outline: none;
+  box-shadow: none !important;
+}
+
+.dropdown-toggle {
+  box-shadow: none !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-icon-size {
+  font-size: 10px;
+}
+
+.dropdown-menu {
+  padding-left: 0px;
+  padding-bottom: 12px;
+  padding-right: 0px;
+  background-color: var(--color-darker);
+  min-width: 210px;
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.dropdown-menu a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown-menu:hover a:hover {
+  color: #fff;
+  background-color: var(--color-main);
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-item {
+  font-size: 20px;
+  color: var(--color-main) !important;
+  font-weight: 500 !important;
+  border-radius: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-darker) !important;
+  color: white !important;
+}
+
+/* ======================================================
+   6. HERO STYLES
+   Styles for hero section and hero forms.
+====================================================== */
+.ff-playfair {
+  font-family: var(--font-2);
+  font-weight: 500 !important;
+}
+
+.testimonial-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+.testimonial-circle-2 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2px solid white;
+}
+
+.testimonial-margin {
+  margin-left: -16px;
+}
+
+.testimonial-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.666);
+  font-family: var(--font-1);
+}
+
+.hero-form {
+  height: fit-content;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: var(--font-1);
+  color: white;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.hero-form::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-form:focus {
+  border: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.hero-form-select {
+  width: 220px;
+  height: fit-content;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: var(--font-1);
+  color: white;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.hero-form-select:focus {
+  outline: none;
+  border-bottom: 1px solid white;
+}
+
+.hero-form-select option {
+  background-color: white;
+  color: black;
+  font-family: var(--font-1);
+  font-size: 16px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--heading-color-2);
+  font-family: var(--font-1);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* ======================================================
+   7. ABOUT STYLES
+   Styles for about section and cards.
+====================================================== */
+.about-card {
+  background-color: var(--color-darker);
+  padding: 24px;
+  width: 100%;
+}
+
+/* About card button hover - mid green */
+.about-card .btn-1:hover {
+  background-color: #6e8878 !important;
+  border-color: #6e8878 !important;
+  color: #ffffff !important;
+}
+
+/* ======================================================
+   8. SERVICE STYLES
+   Styles for services section and icons.
+====================================================== */
+/* Brand Icon Colors - Mid Green (#6E8878) */
+.services-icon,
+i[class*="fa-"],
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+[class*="icon-"],
+.dropdown-icon-size {
+  color: #6e8878 !important;
+  width: 35px;
+  height: 35px;
+}
+
+.services-icon {
+  width: 35px;
+  height: 100%;
+}
+
+.link-1 {
+  color: var(--color-darker);
+  font-size: 16px;
+  font-family: var(--font-1);
+  transition: color 0.3s ease;
+}
+
+.link-1:hover {
+  color: var(--color-main);
+}
+
+/* ======================================================
+   9. HOW IT WORKS STYLES
+   Styles for property listings and related elements.
+====================================================== */
+.bg-listing-1,
+.bg-listing-2,
+.bg-listing-3,
+.bg-listing-4,
+.bg-listing-5,
+.bg-listing-6 {
+  background-size: cover;
+  background-position: center;
+  height: 512px;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+}
+
+.bg-listing-1::after,
+.bg-listing-2::after,
+.bg-listing-3::after,
+.bg-listing-4::after,
+.bg-listing-5::after,
+.bg-listing-6::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bg-listing-1 {
+  background-image: url("../img/listing-1.jpg");
+}
+
+.bg-listing-2 {
+  background-image: url("../img/listing-2.jpg");
+}
+
+.bg-listing-3 {
+  background-image: url("../img/listing-3.jpg");
+}
+
+.bg-listing-4 {
+  background-image: url("../img/listing-4.jpg");
+}
+
+.bg-listing-5 {
+  background-image: url("../img/listing-5.jpg");
+}
+
+.bg-listing-6 {
+  background-image: url("../img/listing-6.jpg");
+}
+
+.detail-img {
+  width: 100%;
+  height: 512px;
+  object-fit: cover;
+}
+
+.text-listing {
+  font-size: 13px;
+  color: white;
+  font-family: var(--font-1);
+  font-weight: 500;
+}
+
+.text-detail {
+  font-size: 13px;
+  color: var(--color-main);
+  font-family: var(--font-1);
+  font-weight: 500;
+}
+
+/* ======================================================
+   10. WHY CHOOSE US STYLES
+   Styles for Why Choose Us section.
+====================================================== */
+.bg-why-choose-us {
+  height: max-content;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/why-choose-us-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.head-why-choose-us {
+  font-size: 19px;
+  color: var(--text-color-2);
+  font-family: var(--font-1);
+  font-weight: 500;
+}
+
+.gallery-img {
+  display: inline-block;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* ======================================================
+   11. TESTIMONIALS STYLES
+   Styles for testimonials section and cards.
+====================================================== */
+.testimonial-card {
+  background-color: var(--color-accent);
+  padding: 30px;
+}
+
+.testimonial-job {
+  font-size: 13px;
+  color: var(--color-border);
+}
+
+/* ======================================================
+   12. VIDEO SECTION STYLES
+   Styles for the video background section.
+====================================================== */
+.video-section-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 500px;
+}
+
+/* Video controls are now completely native - no custom styling applied */
+
+/* Option to completely remove the overlay - uncomment the lines below if you want to remove it entirely */
+/*
+.video-container video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+}
+*/
+
+/* Overlay and custom play button styles removed since we're using content above video */
+
+@media (max-width: 768px) {
+  .video-container {
+    min-height: 400px;
+  }
+
+  .video-container video {
+    min-height: 400px;
+  }
+
+  .video-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .video-play-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ======================================================
+   13. FAQS Style
+   Styles for faqs section and cards.
+====================================================== */
+.accordion,
+.accordion-button,
+.accordion-item,
+.accordion-header,
+.accordion-body {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+  color: var(--text-color-1);
+  background-color: var(--color-subtle);
+  border-bottom: 1px solid var(--color-border) !important;
+}
+
+.accordion-subtle {
+  background-color: var(--color-subtle) !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../icon/left.svg");
+  background-size: auto;
+  background-position: center;
+}
+
+.accordion-button.collapsed::after {
+  background-image: url("../icon/left.svg");
+  transform: rotate(270deg);
+  background-size: auto;
+  background-position: center;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--color-subtle) !important;
+}
+
+.accordion-button:hover {
+  background-color: var(--color-subtle) !important;
+}
+
+.accordion-button:active {
+  background-color: transparent !important;
+}
+
+.accordion-body {
+  background-color: var(--color-subtle) !important;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-item {
+  border: none;
+  border-radius: 0px !important;
+}
+
+.accordion-header,
+.accordion-body,
+.accordion-button {
+  border-radius: 0px !important;
+}
+
+/* ======================================================
+   13. BANNER STYLES
+   Styles for banners and banner backgrounds.
+====================================================== */
+.bg-banner {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-banner-2 {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-banner-3 {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-banner-4 {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-banner-5 {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-banner-6 {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/banner-6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-404 {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/404.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner {
+  height: 442px;
+}
+
+.text-404 {
+  font-size: 200px;
+  color: white;
+  text-align: center;
+}
+
+.banner-subtitle {
+  color: white;
+  font-family: var(--font-1);
+  opacity: 0.8;
+}
+
+.banner-subtitle:hover {
+  opacity: 1;
+}
+
+/* ======================================================
+   14. BLOG POST STYLES
+   Styles for blog post cards and links.
+====================================================== */
+.blog-link {
+  color: var(--color-main);
+  font-size: 15px;
+  font-family: var(--font-1);
+}
+
+.blog-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blog-img-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+}
+
+.blog-img {
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.blog-img-2 {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blog-img-wrapper:hover .blog-img,
+.blog-col-1:hover .blog-img,
+.blog-col-2:hover .blog-img,
+.blog-col-3:hover .blog-img,
+.blog-col-4:hover .blog-img,
+.blog-col-5:hover .blog-img,
+.blog-col-6:hover .blog-img,
+.blog-col-7:hover .blog-img,
+.blog-col-8:hover .blog-img {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.blog-img-wrapper:hover::before {
+  opacity: 1;
+}
+
+.blog-meta {
+  color: var(--text-color-2);
+  font-size: 16px;
+}
+
+.blog-card {
+  background-color: var(--color-darker);
+  padding: 24px;
+}
+
+/* ======================================================
+   15. CORE VALUES STYLES
+   Styles for core values section and cards.
+====================================================== */
+.accent-card {
+  background-color: var(--color-accent);
+  padding: 24px;
+}
+
+/* ======================================================
+   16. TEAM STYLES
+   Styles for team section and team cards.
+====================================================== */
+.team-card {
+  background-color: var(--color-accent);
+}
+
+.team-img {
+  height: 455px;
+  border-radius: var(--border-radius-sm);
+  display: block;
+  transition: transform var(--transition-normal);
+  object-fit: cover;
+}
+
+.img-team-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-sm);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-team-wrapper .img-team-overlay {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  width: 90%;
+  height: 94%;
+  background-color: rgba(46, 47, 48, 0.5);
+  opacity: 0;
+  transition: opacity
+    var(--transition-normal, 0.4s cubic-bezier(0.4, 0, 0.2, 1));
+  z-index: 10;
+}
+
+.img-team-wrapper .social-team {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity
+      var(--transition-normal, 0.4s cubic-bezier(0.4, 0, 0.2, 1)),
+    transform var(--transition-normal, 0.4s cubic-bezier(0.4, 0, 0.2, 1));
+  z-index: 11;
+}
+
+.img-team-wrapper:hover .img-team-overlay {
+  opacity: 1;
+}
+
+.img-team-wrapper:hover .social-team {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.icon-social-team {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  background-color: transparent;
+  font-size: 24px;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.icon-social-team:hover {
+  color: var(--color-main);
+  background-color: white;
+  border: none;
+}
+
+/* ======================================================
+   17. CONTACT STYLES
+   Styles for contact forms and input fields.
+====================================================== */
+.comment-form {
+  background-color: var(--color-accent);
+  padding: 48px;
+}
+
+.contact-input {
+  background: transparent;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: var(--font-1);
+  letter-spacing: 0.6px;
+  padding: 12px;
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.contact-input::placeholder {
+  color: var(--text-color-1);
+}
+
+.contact-input:focus {
+  outline: none;
+}
+
+.contact-input:hover {
+  outline: none;
+}
+
+/* Contact Section Specific Fixes */
+#contact {
+  background-color: var(--bg-color) !important; /* White background */
+}
+
+#contact .c-white {
+  color: var(--text-color-1) !important; /* Override white text to black */
+}
+
+#contact h2,
+#contact h4 {
+  color: var(--heading-color) !important; /* Black headings */
+}
+
+#contact .c-text-2 {
+  color: var(--text-color-2) !important; /* Secondary text color */
+}
+
+#contact .contact-form {
+  background-color: var(
+    --bg-color-2
+  ) !important; /* Off-white background for form */
+}
+
+#contact .contact-input {
+  background-color: var(--bg-color) !important; /* White input backgrounds */
+  border: 1px solid #ddd !important;
+  color: var(--text-color-1) !important; /* Black text in inputs */
+}
+
+#contact .contact-input:focus {
+  border-color: var(--accent-color) !important; /* Mid green focus border */
+  box-shadow: 0 0 0 0.2rem rgba(110, 136, 120, 0.25) !important;
+}
+
+/* ======================================================
+   18. MAPS STYLES
+   Styles for embedded maps and overlays.
+====================================================== */
+.maps-wrapper {
+  position: relative;
+  width: 100%;
+  height: 388px;
+  overflow: hidden;
+}
+
+.maps-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.maps-overlay:hover {
+  background-color: transparent;
+}
+
+.maps {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+/* ======================================================
+   19. SERVICES DETAIL STYLES
+   Styles for service detail cards and backgrounds.
+====================================================== */
+.service-detail-card-1 {
+  background-color: var(--color-darker);
+  padding: 24px;
+}
+
+.service-detail-card-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/service-detail-card.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 24px;
+}
+
+.pricing-card {
+  background-color: var(--color-darker);
+  padding: 64px 32px;
+}
+
+.icon-post-terms {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-main);
+  border-radius: 50%;
+  color: var(--color-main);
+  background-color: transparent;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-post-terms:hover {
+  color: var(--color-subtle);
+  background-color: var(--color-main);
+  border: 1px solid var(--color-main);
+}
+
+/* ======================================================
+   20. FOOTER STYLES
+   Styles for footer sections, newsletter, and footer links.
+====================================================== */
+.newsletter-container {
+  border-bottom: var(--color-accent) 1px solid;
+  width: 75%;
+}
+
+.newsletter-container:hover {
+  border-bottom: white 1px solid;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.btn-newsletter {
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-newsletter i {
+  background-color: transparent;
+  color: #c9c9c9;
+}
+
+.btn-newsletter:hover i {
+  color: white;
+}
+
+.email-input {
+  flex: 1;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.footer-logo {
+  max-width: 240px;
+}
+
+.footer-link {
+  color: var(--text-color-1);
+}
+
+.footer-link:hover {
+  color: var(--color-darker);
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 24px;
+}
+
+.footer-links li {
+  margin: 12px 0;
+}
+
+/* ======================================================
+   21. ANIMATION
+   Animation keyframes and animation utility classes.
+====================================================== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-up,
+.fade-in-down,
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transform: translate(0, 0);
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+}
+
+.fade-in-down {
+  animation-name: fadeInDown;
+}
+
+.fade-in-left {
+  animation-name: fadeInLeft;
+}
+
+.fade-in-right {
+  animation-name: fadeInRight;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.fade-in-up,
+.fade-in-down,
+.fade-in-left,
+.fade-in-right {
+  animation-fill-mode: both;
+}
+
+.popup-message {
+  display: none;
+  background-color: var(--color-border);
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.popup-message-2 {
+  display: none;
+  background-color: var(--color-border);
+  color: var(--heading-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ======================================================
+   22. MEDIA QUERIES
+   Responsive styles for different screen sizes.
+====================================================== */
+@media screen and (max-width: 992px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1em;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 22px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  .page-size {
+    width: 100%;
+    padding: 50px 32px;
+  }
+
+  .navbar-size {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .dropdown-menu {
+    border: none;
+    background-color: var(--color-darker);
+  }
+
+  .dropdown-item {
+    font-size: 14px;
+    color: var(--color-main) !important;
+  }
+
+  .dropdown-item:hover {
+    color: white !important;
+  }
+
+  .search-form {
+    width: 500px;
+  }
+
+  .banner {
+    height: 260px;
+  }
+
+  .pricing-card {
+    padding: 48px 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .page-size {
+    padding: 50px 20px;
+  }
+
+  .navbar-size {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-logo {
+    width: 100%;
+    max-height: 20px;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .bg-sign-up {
+    padding: 16px;
+  }
+
+  .banner {
+    height: 220px;
+  }
+
+  .pricing-card {
+    padding: 24px 16px;
+  }
+}
